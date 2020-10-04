@@ -21,6 +21,7 @@
 			var Height = prompt('請輸入身高(公尺)');
 			var Weight = prompt('請輸入體重(公斤)');
 			var BMI = parseInt( Weight / Math.pow(Height, 2) ); //Integer only
+			var BMIunit = "kg"+"/"+"m^2";
 			
 			var rating1 = "評價：" + "過輕";
 			var rating2 = "評價：" + "標準";
@@ -38,7 +39,7 @@
 									+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
 					
 					document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
-									+ "你的BMI為" + BMI + "\t" +"<br>" + "</font>");
+									+ "你的BMI為" + " " + BMI + " " + BMIunit +"\t" +"<br>" + "</font>");
 									
 					document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
 									+ rating1 + "\t" +"<br>" + "</font>");
@@ -52,7 +53,7 @@
 									+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
 					
 						document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
-									+ "你的BMI為" + BMI + "\t" +"<br>" + "</font>");
+									+ "你的BMI為" + " " + BMI + " " + BMIunit + "\t" +"<br>" + "</font>");
 									
 						document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
 									+ rating2 + "\t" +"<br>" + "</font>");
@@ -66,7 +67,7 @@
 										+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
 					
 							document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
-										+ "你的BMI為" + BMI + "\t" +"<br>" + "</font>");
+										+ "你的BMI為" + " " + BMI + " " + BMIunit + "\t" +"<br>" + "</font>");
 										
 							document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
 										+ rating3 + "\t" +"<br>" + "</font>");										
@@ -80,7 +81,7 @@
 												+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
 						
 									document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
-												+ "你的BMI為" + " " + BMI + "\t" +"<br>" + "</font>");
+												+ "你的BMI為" + " " + BMI + " " + BMIunit + "\t" +"<br>" + "</font>");
 										
 									document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
 												+ rating4 + "\t" +"<br>" + "</font>");
