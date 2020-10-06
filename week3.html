@@ -19,11 +19,12 @@
 		<center>
 		<script language = "Javascript">
 			var Height = prompt('請輸入身高(公尺或公分)');
+				var HeightUnit = ""; 
 			var Weight = prompt('請輸入體重');
 			var BMI = parseInt( Weight / Math.pow(Height, 2) );
 			var BMIunit = "kg"+"/"+"m²";
 			
-			var errormsg = "輸入錯誤！" +" "+"請重新輸入數值。";
+			var errormsg = "輸入錯誤！請重新輸入數值。";
 			
 			var rating1 = "評價：" + "過輕";
 			var rating2 = "評價：" + "標準";
@@ -33,17 +34,19 @@
 			if( Height >= 100 )
 			{
 				BMI = parseInt( Weight / Math.pow( (Height / 100) , 2) );
+				HeightUnit = "公分";
 			}
 			else
 			{
 				BMI = parseInt( Weight / Math.pow(Height, 2) );
+				HeightUnit = "公尺";
 			}
 			
 			
 			if(BMI < 18.5)
 				{
 					document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
-									+ "你輸入的身高為" + " " + Height + " "+ "公尺或公分" + "\t" +"<br>" + "</font>");
+									+ "你輸入的身高為" + " " + Height + " "+ HeightUnit + "\t" +"<br>" + "</font>");
 									
 					document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
 									+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
@@ -57,7 +60,7 @@
 				else if( (BMI>=18.5) && (BMI<24))
 					{
 						document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
-									+ "你輸入的身高為" + " " + Height + " " + "公尺或公分" + "\t" +"<br>" + "</font>");
+									+ "你輸入的身高為" + " " + Height + " " + HeightUnit + "\t" +"<br>" + "</font>");
 									
 						document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
 									+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
@@ -71,7 +74,7 @@
 					else if( (BMI>=24) && (BMI<27) )
 						{
 							document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
-										+ "你輸入的身高為" + " " + Height + " " + "公尺或公分" + "\t" +"<br>" + "</font>");
+										+ "你輸入的身高為" + " " + Height + " " + HeightUnit + "\t" +"<br>" + "</font>");
 									
 							document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
 										+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
@@ -85,7 +88,7 @@
 						else if( BMI > 27 )
 								{
 									document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
-												+ "你輸入的身高為" + " " + Height + " " + "公尺或公分" + "\t" +"<br>" + "</font>");
+												+ "你輸入的身高為" + " " + Height + " " + HeightUnit + "\t" +"<br>" + "</font>");
 										
 									document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
 												+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
