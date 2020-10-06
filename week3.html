@@ -13,14 +13,14 @@
 					<i>姓名:楊宙謨</i> <br>
 					<u>第三次作業</u> </font>
 			</p>
-		<hr size = "8" align = "center" width = "55%" color = "#0000ff"> <br>
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff">
 		
 		
 		<center>
 		<script language = "Javascript">
-			var Height = prompt('請輸入身高(公尺)');
-			var Weight = prompt('請輸入體重(公斤)');
-			var BMI = parseInt( Weight / Math.pow(Height, 2) ); //Integer only
+			var Height = prompt('請輸入身高');
+			var Weight = prompt('請輸入體重');
+			var BMI = parseInt( Weight / Math.pow(Height, 2) );
 			var BMIunit = "kg"+"/"+"m²";
 			
 			var rating1 = "評價：" + "過輕";
@@ -28,7 +28,15 @@
 			var rating3 = "評價：" + "過重";
 			var rating4 = "評價：" + "肥胖";
 			
-			var errormsg = "輸入錯誤！" + "請輸入有效數值。";
+			if( Height >= 100 )
+			{
+				BMI = parseInt( Weight / Math.pow( (Height / 100) , 2) );
+			}
+			else
+			{
+				BMI = parseInt( Weight / Math.pow(Height, 2) );
+			}
+			
 			
 			if(BMI < 18.5)
 				{
@@ -91,7 +99,6 @@
 						document.write("<br>"+"<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
 									+ errormsg + "\t" +"<br>" + "</font>");
 					}
-								
 			
 			function refreshPage()
 			{
@@ -101,8 +108,8 @@
 			
 		</script> <br>
 		</center>
-		<center> <br>
-		<button type="submit"  onClick="refreshPage()" style = "width:160px; height:50px; font-size:32px " > 重新輸入 </button>
+		<center>
+		<button type="submit"  onClick="refreshPage()" style = "width:160px; height:50px; font-size:32px " > 重新計算 </button>
 		</center>
 	</body>
 </html>
