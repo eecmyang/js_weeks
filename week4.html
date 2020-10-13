@@ -1,0 +1,118 @@
+<!--DOCTYPE HTML-->
+<html>
+<head>
+	<title>
+		第四週作業
+	</title>
+</head>
+	<body bgcolor = "#FFE4CA" vlink = "#28FF28" alink = "00EC00" >
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff">   <!--Horizontal rule setting-->
+			<p align="center">   <!--Paragrah setting-->
+				<b><font face = "DFKai-sb" color = "#0000ff" size = "3">  <!--text font setting-->
+					學號:2106105120 </b> <br>
+					<i>姓名:楊宙謨</i> <br>
+					<u>第四次作業</u> </font>
+			</p>
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff"> <br>
+		
+		<font face = "DFKai-sb" color = "#0000ff" size = "5">
+		<center>
+		<script language = "Javascript">
+			//--Plain text variables declaration--//
+				
+				var num_ppl_TX = "班級人數：";
+				var num_ppl_TX_unit = "人";
+				var seat_num = "座號";
+				var the_num = "號成績：";
+				var class_avg = "全班平均成績：";
+				var sc_unit = "分";
+				var class_lowest = "全班最低成績(加分題)：";
+				var class_highest = "全班最高成績(加分題)：";
+				
+			//------------------------------------//
+			
+			//------Functional variables---------//
+			
+				
+				var ppl = prompt("請輸入班級人數。");
+				
+				var ppl_sc_sum = 0;
+				
+				var Sum_avg = "";
+				
+				var min = 100; //extra
+				var max = 0;   //extra
+					
+					
+			//----------------------------------//
+		
+			//--------Arrays related------------//
+				
+	
+				ppl_mx = new Array(parseInt(ppl));
+				
+			
+			//---------------------------------//
+			
+			//--------First paragrah-----------------------------------//
+		
+				document.write(num_ppl_TX+" "+ppl+" "+num_ppl_TX_unit+"<br>"); 
+			
+			//---------------------------------------------------------//
+			
+			//--------for loop area------------------------------------//
+			
+				for(i=0; i < ppl_mx.length; i++)
+				{
+					ppl_mx[i] = Math.random()*100;
+					ppl_mx[i] = Math.round(ppl_mx[i]);
+					
+					ppl_sc_sum = ppl_mx[i] + ppl_sc_sum;
+					
+					Sum_avg = ppl_sc_sum  / parseInt(ppl);
+					
+					Sum_avg = Math.round(Sum_avg);
+					
+					document.write(seat_num+(i+1)+the_num+ppl_mx[i]+sc_unit+"<br>");
+					
+					if(parseInt(ppl_mx[i])<min)
+					{
+						min = parseInt(ppl_mx[i]);
+					}
+					
+					if(parseInt(ppl_mx[i])>max)
+					{
+						max = parseInt(ppl_mx[i]);
+					}
+				
+				}
+				
+			
+			
+			//---------------------------------------------------------//
+			
+			
+				document.write("<br>"+"<hr size = \"8\" align= \"center\" width = \"55%\" color = \"#0000ff\" "+"<br>");
+				
+				document.write(class_avg+Sum_avg+sc_unit+"<br>");
+				document.write(class_lowest+min+sc_unit+"<br>");
+				document.write(class_highest+max+sc_unit+"<br>");
+			
+				
+			
+			//-----------------------------------------//
+			function refreshPage() //Refresh Button
+			{
+				window.location.reload();
+			} 
+			//----------------------------------------//
+			
+		</script> <br>
+		</center>
+		</font>
+		
+		<center>
+		<button type="submit"  onClick="refreshPage()" style = "width:160px; height:50px; font-size:32px " > 重新計算 </button>
+		</center>
+	</body>
+</html>
