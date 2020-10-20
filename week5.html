@@ -1,0 +1,111 @@
+<!--DOCTYPE HTML-->
+<html>
+<head>
+	<title>
+		第五週作業
+	</title>
+	
+	<script language = "Javascript">
+		//-----------------------------------------//
+			function refreshPage() //Refresh Button
+			{
+				window.location.reload();
+			} 
+		//----------------------------------------//
+			
+			
+		function multiplication_formula(x,y){
+			var x=x.toString();
+			var s=x;
+			for(i=0; i<(y-1) ; i++){
+				s = s + "+" + x;
+			}
+			return s;
+		}
+		
+		function multiplication(x,y){
+			return x*y;
+		}
+		
+		function compare(x1,y1,x2,y2){
+			
+			if( (x1*y1) < (x2*y2)){
+				return x2 + "*" + y2;
+			}
+			else{
+				return x1 + "*" + y1;
+			}
+		
+		}
+		
+		function sentences(x,y){
+			
+			return ":" + "這代表有" + x + "個" + y +"加起來<br>" + "因此算式是"+ multiplication_formula(x,y) +"="+ multiplication(x,y) +"<br>" ;
+		
+		}
+		
+		
+		
+	</script>
+	
+</head>
+	<body bgcolor = "#FFE4CA" vlink = "#28FF28" alink = "00EC00" >
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff">   <!--Horizontal rule setting-->
+			<p align="center">   <!--Paragrah setting-->
+				<b><font face = "DFKai-sb" color = "#0000ff" size = "3">  <!--text font setting-->
+					學號:2106105120 </b> <br>
+					<i>姓名:楊宙謨</i> <br>
+					<u>第五次作業</u> </font>
+			</p>
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff"> <br>
+		
+		<font face = "DFKai-sb" color = "#0000ff" size = "5">
+		<script language = "Javascript">
+			
+			//--------------String Variables---------------//
+			
+				var Questioner = prompt("請輸入提問者姓名");
+				var Answerer = prompt("請輸入應答者姓名");
+				
+			//--------------------------------------------//
+			
+			//--------------Value Variables-----------------------//
+			
+				var x1 = parseInt(prompt("請輸入x1"));
+				var y1 = parseInt(prompt("請輸入y1"));
+				var x2 = parseInt(prompt("請輸入x2"));
+				var y2 = parseInt(prompt("請輸入y2"));
+			
+		
+			
+			
+		//===========================================================//
+			
+			
+			//----------------MAIN---------------------------------//
+			
+				document.write(Questioner+":"+Answerer+"請你回答這題數學題<br>");
+				document.write(Answerer+":"+"沒問題"+Questioner+"儘管問<br>");
+				document.write(Questioner+":"+"請用建構式數學將乘法"+x1+"*"+y1+"算出來<br>");
+				document.write(Answerer+ sentences(x1,y1) );
+				//document.write("因此算式是"+ multiplication_formula(x1,y1) +"="+ multiplication(x1,y1) +"<br>");
+				
+				document.write(Questioner+":"+"如果是"+x2+"*"+y2+"呢？<br>");
+				document.write(Answerer+ sentences(x2,y2));
+				//document.write("因此算式是"+ multiplication_formula(x2,y2) +"="+ multiplication(x2,y2) +"<br>");
+				document.write(Questioner+":"+"哪一個乘法的值比較大？<br>");
+				document.write(Answerer+":"+"是"+compare(x1,y1,x2,y2)+"的值比較大");
+			
+			
+			
+			//----------------------------------------------------//
+		
+			
+		</script> <br>
+		</font>
+		
+		<center>
+		<button type="submit"  onClick="refreshPage()" style = "width:160px; height:50px; font-size:32px " > 重新整理 </button>
+		</center>
+	</body>
+</html>
