@@ -1,8 +1,9 @@
-function sum (index ,total){
-		       var book_cost = new Array (100,120,140,150);
-			   if(index!=5){
-			        return total + book_cost[index-1];
-			    }else{
-				    return total;
-			    }
-			}
+function getDegree (name, users_name,users_degree){
+	var degrees ="";
+	for(i=0;i<users_name.length;i++){
+		if(users_name[i]==name){
+		  degrees =users_degree[i];
+		}
+	}
+		return degrees;
+}
