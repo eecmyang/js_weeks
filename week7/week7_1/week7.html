@@ -1,0 +1,64 @@
+<!--DOCTYPE HTML-->
+<html>
+<head>
+	<title>
+		第七週作業
+	</title>
+	
+<script language ="JavaScript" src="RefreshBtn.js"></script>
+
+<script language ="JavaScript" src="Degrees.js"></script>
+<script language ="JavaScript" src="book_index.js"></script>
+<script language ="JavaScript" src="discount.js"></script>
+<script language ="JavaScript" src="discount_coupon.js"></script>
+<script language ="JavaScript" src="sum.js"></script>
+
+<script language ="JavaScript" src="left.js"></script>
+	
+</head>
+	<body bgcolor = "#FFE4CA" vlink = "#28FF28" alink = "00EC00" >
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff">   <!--Horizontal rule setting-->
+			<p align="center">   <!--Paragrah setting-->
+				<b><font face = "DFKai-sb" color = "#0000ff" size = "3">  <!--text font setting-->
+					學號：2106105120 </b> <br>
+					<i>姓名：楊宙謨</i> <br>
+					<u>第七次作業</u> </font>
+			</p>
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff"> <br>
+		<p align="center"> 
+		<font face = "DFKai-sb" color = "#0000ff" size = "5">
+		<script language = "Javascript">
+			var user_name = new Array("李一","陳二","吳三","王四","林五","高六");
+			var user_degree = new Array("鑽石","一般","白金","一般","黃金","黃金",);
+			var books=new Array("電子學","微積分","計算機概論","電路學");
+			
+			var total =0;
+			var boughtBooks =new Array();
+			var numberOfBooks =0;
+			
+			user =prompt("歡迎光臨高科大書城，請輸入使用者" + "\n" + user_name);
+			var degree = getDegree(user,user_name,user_degree);
+		
+			document.write("歡迎光臨高科大書城！<br>");
+			document.write("會員："+user+"("+degree+"等級"+")"+"<br>");
+			document.write("剩餘未使用折價券：");
+			
+			var index = getBoughtBook(books);
+			while(index!=5){
+				total = sum(index,total);
+				boughtBooks[numberOfBooks]=books[index-1];
+				numberOfBooks++;
+				index = getBoughtBook(books);
+			}
+	
+			total = total*parseFloat(discount(degree)) - discount_coupon(degree) ;
+			document.write("<br>"+"共購買了書籍："+boughtBooks+"<br>");
+			document.write("總價："+"$"+total+"元");
+		</script> <br>
+		</font>
+		</p>
+		<center>
+		<button type="submit"  onClick="refreshPage()" style = "width：160px; height：50px; font-size：32px " > 重新整理 </button>
+		</center>
+	</body>
+</html>
