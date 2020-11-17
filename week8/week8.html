@@ -1,0 +1,151 @@
+<!--DOCTYPE HTML-->
+<html>
+<head>
+	<title>
+		第八週作業
+	</title>
+	
+	<script language = "Javascript" src="refreshPage.js"></script>
+	<script language = "Javascript" src="bmi.js"></script>
+	<script language = "Javascript" src="bmi_evaluate.js"></script>
+	<script language = "Javascript" src="eval_btn_enable.js"></script>
+	
+</head>
+	<body bgcolor = "#FFE4CA" vlink = "#28FF28" alink = "00EC00" >
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff">   <!--Horizontal rule setting-->
+			<p align="center">   <!--Paragrah setting-->
+				<b><font face = "DFKai-sb" color = "#0000ff" size = "3">  <!--text font setting-->
+					學號:2106105120 </b> <br>
+					<i>姓名:楊宙謨</i> <br>
+					<u>第八次作業</u> </font>
+			</p>
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff">
+		
+		<font face = "DFKai-sb" color = "#0000ff" size = "7">
+			<form name="name1" id="form1" align="center">
+				<p>
+					身高：<input type="text" id="hgt_text" style="height:50px;font-size:20px;" size=10/> <br>
+						<br>
+					體重：<input type="text" id="wgt_text" style="height:50px;font-size:20px;" size=10/> <br>
+						<br>
+	
+					<input type="button" id="cal_btn" value="計算" style = "width:70px; height:30px; font-size:16px " onClick="evaluate_enable();bmi()"/> 
+					<input type="button" id="eval_btn" value="評估" style = "width:70px; height:30px; font-size:16px " onClick="bmi_evaluate()"/> 
+	
+				</p>
+			</form>
+		
+		
+				<script language = "Javascript">
+					document.write("<p id=\"DispR\" align=\"center\">");
+					document.write("</p>");
+					document.write("<p id=\"evalR\" align=\"center\">");
+					document.write("</p>");
+					
+					document.getElementById("eval_btn").disabled=true;
+					
+				</script>
+		</font>
+		
+		<!-- <center>
+		<script language = "Javascript">
+			var Height = prompt('請輸入身高(公尺或公分)');
+				var HeightUnit = ""; 
+			var Weight = prompt('請輸入體重');
+			var BMI = parseInt( Weight / Math.pow(Height, 2) );
+			var BMIunit = "kg"+"/"+"m²";
+			
+			var errormsg = "輸入錯誤！請重新輸入數值。";
+			
+			var rating1 = "評價：" + "過輕";
+			var rating2 = "評價：" + "標準";
+			var rating3 = "評價：" + "過重";
+			var rating4 = "評價：" + "肥胖";
+			
+			if( Height >= 100 )
+			{
+				BMI = parseInt( Weight / Math.pow( (Height / 100) , 2) );
+				HeightUnit = "公分";
+			}
+			else
+			{
+				BMI = parseInt( Weight / Math.pow(Height, 2) );
+				HeightUnit = "公尺";
+			}
+			
+			
+			if(BMI < 18.5)
+				{
+					document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+									+ "你輸入的身高為" + " " + Height + " "+ HeightUnit + "\t" +"<br>" + "</font>");
+									
+					document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+									+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
+					
+					document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+									+ "你的BMI為" + " " + BMI + " " + BMIunit +"\t" +"<br>" + "</font>");
+									
+					document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+									+ rating1 + "\t" +"<br>" + "</font>");
+				}
+				else if( (BMI>=18.5) && (BMI<24))
+					{
+						document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+									+ "你輸入的身高為" + " " + Height + " " + HeightUnit + "\t" +"<br>" + "</font>");
+									
+						document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+									+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
+					
+						document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+									+ "你的BMI為" + " " + BMI + " " + BMIunit + "\t" +"<br>" + "</font>");
+									
+						document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+									+ rating2 + "\t" +"<br>" + "</font>");
+					}
+					else if( (BMI>=24) && (BMI<27) )
+						{
+							document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+										+ "你輸入的身高為" + " " + Height + " " + HeightUnit + "\t" +"<br>" + "</font>");
+									
+							document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+										+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
+					
+							document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+										+ "你的BMI為" + " " + BMI + " " + BMIunit + "\t" +"<br>" + "</font>");
+										
+							document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+										+ rating3 + "\t" +"<br>" + "</font>");										
+						}
+						else if( BMI > 27 )
+								{
+									document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+												+ "你輸入的身高為" + " " + Height + " " + HeightUnit + "\t" +"<br>" + "</font>");
+										
+									document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+												+ "你輸入的體重為" + " " + Weight + " " + "公斤" + "\t" +"<br>" + "</font>");
+						
+									document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+												+ "你的BMI為" + " " + BMI + " " + BMIunit + "\t" +"<br>" + "</font>");
+										
+									document.write("<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+												+ rating4 + "\t" +"<br>" + "</font>");
+								}
+				else
+					{
+						document.write("<br>"+"<font face = \"DFKai-sb\" color = \"#0000ff\" size = \"7\">"
+									+ errormsg + "\t" +"<br>" + "</font>");
+					}
+			
+			function refreshPage()
+			{
+				window.location.reload();
+			} 
+			
+			
+		</script> <br>
+		</center> -->
+		<center>
+		<button type="submit"  onClick="refreshPage()" style = "width:160px; height:50px; font-size:32px " > 重新計算 </button>
+		</center>
+	</body>
+</html>
