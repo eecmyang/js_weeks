@@ -30,7 +30,7 @@ function bmi() {
 			HeightUnit = "m";
 			
 		}
-	document.getElementById("DispR").innerHTML = "<ul style = \"list-style-type:square;\">"+"<li>"+"Height:"+ hgt_val_convert +HeightUnit+"</li>"+"<br>"+"<li>"+"Weight:"+wgt_val+"kg<br>"+"</li>"+"<li>"+"BMI:"+BMI+"kg/m²"+"</li>"+"</ul>";
+	document.getElementById("DispR").innerHTML = "<ul style = \"list-style-type:square;\">"+"<li>"+"Height:"+ hgt_val_convert +HeightUnit+ "<br>" +"</li>"+"<li>"+"Weight:"+wgt_val+"kg"+"<br>"+"</li>"+"<li>"+"BMI:"+BMI+"kg/m²"+"</li>"+"</ul>";
 
 
 }
