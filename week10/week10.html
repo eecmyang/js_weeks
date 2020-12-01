@@ -1,0 +1,101 @@
+<!--DOCTYPE HTML-->
+<html>
+<head>
+	<title>
+		第十週作業
+	</title>
+	
+	<script language = "Javascript" src="refreshPage.js"></script>
+	<script language = "Javascript" src="bmi.js"></script>
+	<script language = "Javascript" src="bmi_evaluate.js"></script>
+	<script language = "Javascript" src="baseline.js"></script>
+	<script language = "Javascript" src="normalWeight.js"></script>
+	
+	<script language = "Javascript" src="showLoadLable.js"></script>
+	<script language = "Javascript" src="showfocus.js"></script>
+	<script language = "Javascript" src="showfocusw.js"></script>
+	<script language = "Javascript" src="ShowNameH.js"></script>
+	<script language = "Javascript" src="ShowNameW.js"></script>
+	<script language = "Javascript" src="height.js"></script>
+	<script language = "Javascript" src="weight.js"></script>
+	
+	<script language = "Javascript" src="overevalB.js"></script>
+	<script language = "Javascript" src="overevalB_c.js"></script>
+	
+	<script language = "Javascript" src="clr.js"></script>
+	
+	<style type="text/css">
+		table {
+			border: 0;
+			font-family: arial;
+			font-size:18px;
+		}
+		th {
+			background-color:yellow;
+		}
+		.Red_color {
+			color:#FF0000;
+		}
+		.Black_color {
+			color:#000000;
+		}
+	</style>
+	
+	
+</head>
+	<body bgcolor = "#FFE4CA" vlink = "#28FF28" alink = "00EC00" onLoad="showLdLb()">
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff">   <!--Horizontal rule setting-->
+			<p align="center">   <!--Paragrah setting-->
+				<b><font face = "DFKai-sb" color = "#0000ff" size = "3">  <!--text font setting-->
+					學號:2106105120 </b> <br>
+					<i>姓名:楊宙謨</i> <br>
+					<u>第十次作業</u> </font>
+			</p>
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff">
+		
+		<font face = "DFKai-sb" color = "#0000ff" size = "7">
+			<form name="name1" id="form1" align="center">
+				<p>
+					身高：<input type="text" id="hgt_text" style="height:50px;font-size:20px;" size=10 onchange="hght();bmi()" onfocus="clr();ShowFS()" onblur="ShowName_h()" /> <font face = "DFKai-sb" color = "#0000ff" size = "4"> <span id="hgt_hint"></span> </font> <br>
+						<br>
+					體重：<input type="text" id="wgt_text" style="height:50px;font-size:20px;" size=10 onchange="wght();bmi()" onfocus="clr();ShowFSW()" onblur="ShowName_w()" />  <font face = "DFKai-sb" color = "#0000ff" size = "4"> <span id="wgt_hint"></span> </font> <br>
+						<br>
+					<font face = "DFKai-sb" color = "#0000ff" size = "4">
+						<input type="button" id="eval_btn" value="評估" style = "width:70px; height:30px; font-size:16px " onClick="bmi_evaluate();baseline()" onmouseover="eval_hint()" onmouseout="eval_hint_c()"/> <br> 
+						<br> <span id="evalB_hint"></span>
+					</font>
+				</p>
+			</form>
+				<center>
+				<div style="WIDTH: 300px; text-align=left">
+					<div style="WIDTH: 300px; text-align: left">
+					<ul style='list-style-type:square'>
+						<li id="hgt_id">Height:</li>
+						<li id="wgt_id">Weight:</li>
+						<li id="BMI_disp">BMI:</li>
+						<li id="rates">評價:</li>
+						<li id="eval"></li>
+					</ul>
+				</div>
+				</center>
+		</font>
+			
+			
+			<center>
+			<table style="border:8px #0000FF groove">
+				<tr>
+					<th>身高</th>
+					<th>標準體重</th>
+				</tr>
+				<tr>
+					<td id="user_weight"></td>
+					<td id="normal_weight"></td>
+				</tr>	
+			</table>
+			</center><br>
+	
+		<center>
+		<br><button type="submit"  onClick="refreshPage()" style = "width:160px; height:50px; font-size:32px " > 重新計算 </button>
+		</center>
+	</body>
+</html>
