@@ -1,0 +1,159 @@
+<!--DOCTYPE HTML-->
+<html>
+<head>
+	<title>
+		第十一週作業
+	</title>
+	
+	<script language = "Javascript" src="refreshPage.js"></script>
+	
+	<script language = "Javascript" src="bmi.js"></script>
+	<script language = "Javascript" src="bmi_evaluate.js"></script>
+	<script language = "Javascript" src="baseline.js"></script>
+	<script language = "Javascript" src="sexeval.js"></script>
+	<script language = "Javascript" src="normalWeight.js"></script>
+	<script language = "Javascript" src="height.js"></script>
+	<script language = "Javascript" src="weight.js"></script>	
+
+	
+	<style type="text/css">
+		table {
+			border: 0;
+			font-family: arial;
+			font-size:18px;
+		}
+		th {
+			background-color:yellow;
+		}
+		.Red_color {
+			color:#FF0000;
+		}
+		.Black_color {
+			color:#000000;
+		}
+	</style>
+	
+	
+</head>
+	<body bgcolor = "#FFE4CA" vlink = "#28FF28" alink = "00EC00" onLoad="showLdLb()">
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff">   <!--Horizontal rule setting-->
+			<p align="center">   <!--Paragrah setting-->
+				<b><font face = "DFKai-sb" color = "#0000ff" size = "3">  <!--text font setting-->
+					學號:2106105120 </b> <br>
+					<i>姓名:楊宙謨</i> <br>
+					<u>第十一次作業</u> </font>
+			</p>
+		<hr size = "8" align = "center" width = "55%" color = "#0000ff">
+		
+		<font face = "DFKai-sb" color = "#0000ff" size = "4">
+			
+				<table style="border:2px #0000FF groove; color:blue" rules='ALL' align="center">
+					<tr>
+						
+						<td style="background-color:yellow; color:blue" >請輸入基本資料</td>
+						<td style="background-color:#EAC9C2; color:blue">BMI</td>
+						
+					</tr>
+					
+					
+					<tr>
+						<td style="background-color:#FFFFFF">
+						<form id = 'form_sex'>
+							性別:
+							<input type="radio" name="sex" value="M" onchange="sexEval()">男
+							<input type="radio" name="sex" value="F" onchange="sexEval()">女
+						</form>
+						</td>
+						<td>
+							<textarea  id="BMI_disp"></textarea>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							身高:<input type="text" id="hgt" onchange="hght();bmi();sexEval()" >
+						</td>
+						<td style="background-color:#EAC9C2">
+							標準體重
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							體重:<input type="text" id="wgt" onchange="wght();bmi();sexEval()">
+						</td>
+						<td>
+							<textarea  id="eval"></textarea>
+						</td>
+					</tr>
+					
+					
+						
+				</table>
+				
+				<form name="name1" id="form1" align="center">
+				<p>					
+					<font face = "DFKai-sb" color = "#0000ff" size = "4">
+						<input type="button" id="eval_btn" value="評估" style = "width:70px; height:30px; font-size:16px " onClick="bmi_evaluate();baseline()" /> <br> 
+						<br> <span id="evalB_hint"></span>
+					</font>
+				</p>
+			</form>
+
+		</font>
+			
+			<center>
+			<table style="border:4px #0000FF groove;color:blue" RULES='ALL' bgcolor="white">
+				<tr>
+					<td>
+						Height
+					</td>
+			
+					<td>
+						<textarea  id="hgt_id"></textarea>
+					</td>
+			
+				</tr>
+			
+				<tr>
+						<td>
+							Weight
+						</td>
+			
+					<td>
+						<textarea  id="wgh_id"></textarea>
+					</td>
+			
+				</tr>
+				
+				<tr>
+					<td>
+						評估
+					</td>
+			
+					<td>
+						<textarea  id="rates"></textarea>
+					</td>
+			
+				</tr>
+				
+				<tr style="background-color:yellow">
+					<th>身高</th>
+					<th>標準體重範圍</th>
+				</tr>
+				
+				<tr>
+					<td id="user_weight"> </td>
+					<td id="normal_weight"> </td>
+				</tr>	
+				
+			</table>
+			<center>
+		
+		
+	
+		<center>
+		<br><button type="submit"  onClick="refreshPage()" style = "width:150px; height:50px; font-size:32px " > 重新計算 </button>
+		</center>
+	</body>
+</html>
