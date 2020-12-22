@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>
+		第十三週作業
+	</title>
+	<style type = "text/css">
+	div{
+		text-align:center;
+	}
+	.box{
+		margin: 20px;
+		padding: 50px;
+		border: 20px solid blue
+	}
+	</style>
+	
+	<script language = "Javascript" src="ReplaceBox.js"></script>
+	<script language = "Javascript" src="BorderStyle.js"></script>
+	
+</head>
+	<body bgcolor="#ffdab9" >
+		<hr size="8" align="center" width="50%" color="#0000ff">   <!--Horizontal rule setting-->
+			<p align="center">   <!--Paragrah setting-->
+				<b><font face="DFKai-sb" color="#0000ff" size="3">  <!--text font setting-->
+					學號:2106105120 </b> <br>
+					<i>姓名:楊宙謨</i> <br>
+					<u>第十三次作業</u> </font>
+			</p>
+		<hr size="8" align="center" width="50%" color="#0000ff">
+			
+		<font face="DFKai-sb" color="#0000ff" size="3">
+			
+			<div id="boxArea" class="box">邊界測試</div>
+			<div>
+				<form name="form" id="form">
+					margin的上邊界:
+					<input type="text" onchange="replaceBox()" id="marginTop" style="height:30px;"/>
+					<br>
+					margin的右邊界:
+					<input type="text" onchange="replaceBox()" id="marginRight" style="height:30px;"/>
+					<br>
+					margin的下邊界:
+					<input type="text" onchange="replaceBox()" id="marginBottom" style="height:30px;"/>
+					<br>
+					margin的左邊界:
+					<input type="text" onchange="replaceBox()" id="marginLeft" style="height:30px;"/>
+					<br>
+					
+					
+					padding的上邊界:
+					<input type="text" onchange="replaceBox()" id="paddingTop" style="height:30px;"/>
+					<br>
+					
+					padding的右邊界:
+					<input type="text" onchange="replaceBox()" id="paddingRight" style="height:30px;"/>
+					<br>
+					
+					padding的下邊界:
+					<input type="text" onchange="replaceBox()" id="paddingBottom" style="height:30px;"/>
+					<br>
+					
+					padding的左邊界:
+					<input type="text" onchange="replaceBox()" id="paddingLeft" style="height:30px;"/>
+					<br>
+					
+					
+					
+					border:
+					<input type="text" onchange="replaceBox()" id="border" style="height:30px;"/>
+					<br>
+					border style:
+					<input type="text" onchange="borderStyle();replaceBox()" id="borderStyle1" style="height:30px;"/>
+					<br>
+					
+					<!-- <input type="button" id="submit" value="更新" onclick="replaceBox()" style="height:30px;"/> -->
+					
+				</form>
+			</div>
+			
+		
+		</font>
+		
+	
+	</body>
+</html>
