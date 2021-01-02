@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>
+		第十四週作業
+	</title>
+	
+	<script language = "Javascript" src="refreshPage.js"></script>
+	
+	
+	
+</head>
+	<body bgcolor="#ffdab9" >
+		<hr size="8" align="center" width="50%" color="#0000ff">   <!--Horizontal rule setting-->
+			<p align="center">   <!--Paragrah setting-->
+				<b><font face="DFKai-sb" color="#0000ff" size="3">  <!--text font setting-->
+					學號:2106105120 </b> <br>
+					<i>姓名:楊宙謨</i> <br>
+					<u>第十四次作業</u> </font>
+			</p>
+		<hr size="8" align="center" width="50%" color="#0000ff">
+			<font face="DFKai-sb" color="#0000ff">
+				<center> <H1> 期末教學意見留言板 </H1> </center>
+			</font>
+		
+		<form action = "mailto:2106105120@nkust.edu.tw" method = "post" enctype = "text/plain">
+			
+			<table style="border:2px #0000FF groove; color:blue" rules='ALL' align="center">
+					<tr>
+						
+						<td style="background-color:yellow; color:blue" >請輸入基本資料</td>
+						<td>
+							姓名:   <input type="text" id = "nameID" name ="name " required placeholder = "王小明" />
+						</td>
+						
+					</tr>
+					
+					
+					<tr>
+						<td style="background-color:#FFFFFF">
+						<form id = 'form_sex'>
+							性別:
+							<input type="radio" name="sex" value="M" onchange="sexEval()"/>男
+							<input type="radio" name="sex" value="F" onchange="sexEval()"/>女
+						</form>
+						</td>
+							<td>
+							E-mail:<input type="email" name = "email" id = "emailID" "/>
+						</td>
+						
+					</tr>
+					
+					<tr>
+						
+						<td style="background-color:#EAC9C2; color:blue">你想說的話</td>
+						<td style="background-color:#EAC9C2">
+							對於這學期的課程建議
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<textarea  id="BMI_disp" style = "width:80%" name="words"></textarea>
+						</td>
+						<td>
+							<textarea  id="eval" style = "width:80%" name="advices"></textarea>
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="2">
+							<form id ="form_hobby" >
+								評價:
+								<input type="checkbox" name="hobby" value="normal">普通
+								<input type="checkbox" name="hobby" value="good">好
+								<input type="checkbox" name="hobby" value="veryGood">非常好
+								<input type="checkbox" name="hobby" value="fantastic">極棒
+							</form> 
+						</td>
+					</tr>
+					
+						
+				</table>
+				<br>
+			<center>
+				<input type="submit" value="傳送">
+				<input type="reset" value="清除">
+			</center>
+		</form>
+		
+		<br>
+		
+		<center>
+		<br><button type="submit"  onClick="refreshPage()" style = "width:160px; height:50px; font-size:32px " > 重新整理 </button>
+		</center>
+	
+	</body>
+</html>
